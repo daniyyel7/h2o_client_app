@@ -26,13 +26,6 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
           backgroundImage: AssetImage('assets/img/logo.png')
         ),
       ),
-      actions: [
-        IconButton(
-          icon: const Icon(Icons.shopping_cart_outlined),
-          onPressed: () { },
-          color: Colors.white,
-        )
-      ],
     );
   }
   
