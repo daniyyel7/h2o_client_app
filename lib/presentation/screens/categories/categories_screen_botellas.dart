@@ -28,9 +28,9 @@ class CategoriesScreenBotellas extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Divider(thickness: 2, color: Color(0xFF08A5C0)), // Línea separadora
+                    child: Divider(thickness: 2, color: Color(0xFF08A5C0)),
                   ),
-                  SizedBox(width: 8), // Espacio entre la línea y el texto
+                  SizedBox(width: 8), 
                   Text(
                     'Botellas',
                     style: TextStyle(
@@ -39,9 +39,9 @@ class CategoriesScreenBotellas extends StatelessWidget {
                       color: Colors.black
                     ),
                   ),
-                  SizedBox(width: 8), // Espacio entre el texto y la línea
+                  SizedBox(width: 8), 
                   Expanded(
-                    child: Divider(thickness: 2, color: Color(0xFF08A5C0)), // Línea separadora
+                    child: Divider(thickness: 2, color: Color(0xFF08A5C0)),
                   ),
                 ],
               ),
