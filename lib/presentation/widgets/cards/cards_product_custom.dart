@@ -7,7 +7,7 @@ class CardsProductCustom extends StatelessWidget {
   const CardsProductCustom({
     super.key, 
     required this.titleCard,
-    required this.height
+    required this.height,
     });
 
   @override
@@ -41,7 +41,7 @@ class CardsProductCustom extends StatelessWidget {
                         SizedBox(
                           height: 80,
                           width: 230,
-                          child: Text('Descripcion del prodcuto sdjdsh asdhasdhuad asdhauhd sajdbjabdashdhadjhsjhda', style: TextStyle( fontSize: 12))),
+                          child: Text('Descripcion del producto sdjdsh asdhasdhuad asdhauhd sajdbjabdashdhadjhsjhda', style: TextStyle( fontSize: 12))),
                       ],
                     ),
                     Column(
@@ -61,7 +61,7 @@ class CardsProductCustom extends StatelessWidget {
                               width: 100,
                               child: TextButton(
                                 style: TextButton.styleFrom(
-                                  backgroundColor: Color(0xFFFFC40F),
+                                  backgroundColor: const Color(0xFFFFC40F),
                                   
                                 ),
                                 child: const Text('Agregar'),

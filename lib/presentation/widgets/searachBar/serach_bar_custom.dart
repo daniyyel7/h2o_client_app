@@ -11,9 +11,9 @@ class SearchBarCustom extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 7.0),
+      padding: EdgeInsets.symmetric(horizontal: 7.0, vertical: 12.0),
       child: SearchBar(
-        hintText: "Buscador",
+        hintText: "Buscar",
         leading: Icon(
           Icons.search_outlined,
           color: Color.fromARGB(113, 8, 164, 192),
