@@ -79,6 +79,7 @@ flutter:
         - asset: assets/fonts/BasierSquare-SemiBoldItalic.ttf
 
   assets:
+    - assets/img/logo.png
     - assets/img/slider1.png
     - assets/img/slider2.png
     - assets/img/slider3.png
