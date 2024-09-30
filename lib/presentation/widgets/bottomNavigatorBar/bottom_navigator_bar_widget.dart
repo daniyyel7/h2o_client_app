@@ -30,10 +30,10 @@ class _BottomNavigatorBarCustomState extends State<BottomNavigatorBarCustom> {
   void onItemTapped(BuildContext context, int index) {
     switch (index) {
       case 0:
-        context.go('/viewproducts');
+        context.goNamed('view_products_screen');
         break;
       case 1:
-        context.go('/');
+        context.goNamed('home_screen');
         break;
       case 2:
         context.go('/s');

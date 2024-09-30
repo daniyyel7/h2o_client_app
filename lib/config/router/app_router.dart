@@ -10,11 +10,13 @@ final appRouter = GoRouter(
 
     GoRoute(
       path: '/',
+      name: 'home_screen',
       builder: (context, state) => const HomeScreen(),
     ),
 
     GoRoute(
       path: '/viewproducts',
+      name: 'view_products_screen',
       builder: (context, state) => const ViewProductsScreen(),
     ),
 
