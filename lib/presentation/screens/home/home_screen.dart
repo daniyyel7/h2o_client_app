@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.dart';
 import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -25,10 +27,6 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: SearchBarCustom(),
-            ),
             // Carrusel de imágenes
             CarouselSlider(
               options: CarouselOptions(
@@ -79,12 +77,13 @@ class HomeScreen extends StatelessWidget {
 
             // Cards productos
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              padding: EdgeInsets.symmetric(horizontal: 0.0),
               child: Column(
                 children: [
                   CardsProductCustom(
                     titleCard: 'Garrafón Lleno',
-                    height: 200,
+                    description: 'descripcion de garrafon lleno',
+                    price: '53',
                   ),
                 ],
               ),
@@ -139,6 +138,7 @@ class HomeScreen extends StatelessWidget {
                       icon: const Icon(Icons.arrow_forward_ios),
                       onPressed: () {
                         // Navegar a garrafones
+                        context.goNamed('categories_screen_garrafones');
                       },
                     ),
                   ],
@@ -183,6 +183,7 @@ class HomeScreen extends StatelessWidget {
                       icon: const Icon(Icons.arrow_forward_ios),
                       onPressed: () {
                         // Navegar a botellas
+                        context.goNamed('categories_screen_botellas');
                       },
                     ),
                   ],

@@ -5,6 +5,7 @@ import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.d
 import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class CategoriesScreenGarrafones extends StatelessWidget {
+  static const String name = 'categories_screen_garrafones';
   const CategoriesScreenGarrafones({super.key});
 
   @override
@@ -17,11 +18,6 @@ class CategoriesScreenGarrafones extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(12.0),
-              child: SearchBarCustom(),
-            ),
-
             // Separación entre el buscador y las cards
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
@@ -30,14 +26,14 @@ class CategoriesScreenGarrafones extends StatelessWidget {
                   Expanded(
                     child: Divider(
                         thickness: 2,
-                        color: Color(0xFF08A5C0)
+                        color: Color(0xFF34949C)
                         ),
                   ),
                   SizedBox(width: 8), 
                   Text(
                     'Garrafones',
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 12,
                         fontWeight: FontWeight.normal,
                         color: Colors.black),
                   ),
@@ -45,7 +41,7 @@ class CategoriesScreenGarrafones extends StatelessWidget {
                   Expanded(
                     child: Divider(
                         thickness: 2,
-                        color: Color(0xFF08A5C0)
+                        color: Color(0xFF34949C)
                         ),
                   ),
                 ],
@@ -54,18 +50,20 @@ class CategoriesScreenGarrafones extends StatelessWidget {
 
             // Cards productos
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: SizedBox(
                   height: 600.0,
                   child: ListView(
                     children: const [
                       CardsProductCustom(
-                        titleCard: 'Garrafón Lleno',
-                        height: 200,
+                         titleCard: 'Garrafón Lleno',
+                        description: 'descripcion de garrafon lleno',
+                        price: '53',
                       ),
                       CardsProductCustom(
-                          titleCard: 'Garrafón vacío', 
-                          height: 200
+                           titleCard: 'Garrafón vacío', 
+                        description: 'descripcion de garrafon vacio',
+                        price: '23',
                       ),
                     ],
                   )),
