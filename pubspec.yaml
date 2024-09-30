@@ -75,6 +75,12 @@ flutter:
 
   assets:
     - assets/img/logo.png
+    - assets/img/garrafon.png
+    - assets/img/garrafon_categoria.png
+    - assets/img/botellas_categorias.png
+    - assets/img/slider1.png
+    - assets/img/slider2.png
+    - assets/img/slider3.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

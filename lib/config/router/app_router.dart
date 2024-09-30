@@ -20,6 +20,17 @@ final appRouter = GoRouter(
       builder: (context, state) => const ViewProductsScreen(),
     ),
 
+    GoRoute(
+      path: '/categoriesBotellas',
+      name: 'categories_screen_botellas',
+      builder: (context, state) => const CategoriesScreenBotellas(),
+    ),
+
+     GoRoute(
+      path: '/categoriesGarrafones',
+      name: 'categories_screen_garrafones',
+      builder: (context, state) => const CategoriesScreenGarrafones(),
+    ),
 
 
 

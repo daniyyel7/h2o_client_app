@@ -43,7 +43,8 @@ class _IconButtonCustom extends StatelessWidget {
       color: Colors.lightGreen,
       style: const ButtonStyle(
           foregroundColor: WidgetStatePropertyAll(Colors.white),
-          backgroundColor: WidgetStatePropertyAll(Color(0xFF08A5C0))),
+          backgroundColor: WidgetStatePropertyAll(Color(0xFF08A5C0))
+          ),
       onPressed: () {},
       iconSize: 15,
       constraints: const BoxConstraints(
@@ -51,3 +52,4 @@ class _IconButtonCustom extends StatelessWidget {
     );
   }
 }
+
