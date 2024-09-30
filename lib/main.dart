@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:h2o_client_app/config/themes/app_theme.dart';
+import 'package:h2o_client_app/presentation/screens/categories/categories_screen_garrafones.dart';
 import 'package:h2o_client_app/presentation/screens/home/home_screen.dart';
 
 void main() => runApp(const MyApp());

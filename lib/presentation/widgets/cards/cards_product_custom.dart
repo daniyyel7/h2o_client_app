@@ -17,42 +17,48 @@ class CardsProductCustom extends StatelessWidget {
         color: Colors.white,
         child: SizedBox(
             height: height,
-            width: 350,
             child: Row(
               children: [
                 const _ImageProdcutCard(
                   urlImage: 'assets/img/logo.png',
                 ),
-                Column(
-                  children: [
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        _TitleProduct(title: 'Garrafón',),
-                        SizedBox(
-                            height: 80,
-                            width: 220,
-                            child: _DescriptionProduct(description: 'Descripcion del producto asdasdasdasda sadas das dasdasdasdasd asdasdasdeffwefwef',)),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Precio',
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600)),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const AddMinusCustom(),
-                            _ButtonAdd(),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 10),
+                          const _TitleProduct(
+                            title: 'Garrafón',
+                          ),
+                          const SizedBox(
+                            child: _DescriptionProduct(
+                              description:
+                                  'Descripcion del producto asdasdasdasda sadas das dasdasdasdasd asdasdasdeffwefwef',
+                            ),
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('Precio',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600)),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  const AddMinusCustom(),
+                                  _ButtonAdd(),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
               ],
             )),
       )),
@@ -60,26 +66,23 @@ class CardsProductCustom extends StatelessWidget {
   }
 }
 
-
-
 class _ButtonAdd extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 40,
-      width: 100,
+      width: 60,
       child: TextButton(
         style: const ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(Colors.amber),
-          
         ),
         child: const Text(
           'Agregar',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            fontSize: 12.0,
+            color: Colors.black),
         ),
         onPressed: () {},
-        
       ),
     );
   }
@@ -93,9 +96,7 @@ class _DescriptionProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-        description,
-        style: const TextStyle(fontSize: 12));
+    return Text(description, style: const TextStyle(fontSize: 12));
   }
 }
 
