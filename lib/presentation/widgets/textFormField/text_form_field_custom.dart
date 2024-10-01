@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class TextFormFieldCustom extends StatelessWidget {
   final String? labelText;
+  final IconData? icon;
 
-  const TextFormFieldCustom({super.key, this.labelText});
+  const TextFormFieldCustom({super.key, this.labelText, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,13 @@ class TextFormFieldCustom extends StatelessWidget {
       labelText: labelText,
       filled: true,
       fillColor: Colors.white,
+      suffixIcon: icon != null
+          ? Icon(
+              icon,
+              size: 20,
+              color: Colors.grey,
+            )
+          : null,
     );
 
     return Padding(

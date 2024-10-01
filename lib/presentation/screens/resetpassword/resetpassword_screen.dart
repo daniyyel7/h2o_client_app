@@ -8,14 +8,14 @@ import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_fiel
 
 // convertir tu StatelessWidget en un StatefulWidget
 //(No acepta variables de estado)
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class ResetPasswordScreen extends StatefulWidget {
+  const ResetPasswordScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   bool _isChecked = false;
 
   @override
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     children: [
                       const SizedBox(height: 40),
-                      const Text('Iniciar sesión',
+                      const Text('Resetear contraseña',
                           style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
@@ -80,65 +80,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 40,
                       ),
                       const TextFormFieldCustom(
-                        labelText: 'Usuario',
-                        icon: Icons.person,
+                        labelText: 'Correo',
+                        icon: Icons.email,
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const TextFormFieldCustom(
-                        labelText: 'Contraseña',
-                        icon: Icons.remove_red_eye,
-                      ),
-                      const SizedBox(height: 5),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const SizedBox(width: 7),
-                          Checkbox(
-                            value: _isChecked,
-                            onChanged: (value) {
-                              setState(() {
-                                _isChecked = value ?? false;
-                              });
-                            },
-                            visualDensity: VisualDensity.standard,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
-                              side: BorderSide(
-                                color: _isChecked
-                                    ? const Color(0xff08A5C0)
-                                    : Colors.grey,
-                                width: 2,
-                              ),
-                            ),
-                            fillColor: WidgetStateProperty.all(_isChecked
-                                ? const Color(0xff08A5C0)
-                                : Colors.transparent),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 0.01),
-                            child: const Text('Recordar'),
-                          )
-                        ],
-                      ),
-                      Container(
-                          padding: const EdgeInsets.only(right: 25),
-                          alignment: Alignment.centerRight,
-                          child: TextButton(
-                            style: const ButtonStyle(),
-                            onPressed: () {},
-                            child: const Text(
-                              '¿Has olvidado tu contraseña?',
-                              style: TextStyle(
-                                color: Color(0xff08A5C0),
-                              ),
-                            ),
-                          )),
-                      const SizedBox(
-                          height:
-                              18), //Espacio entre "Recordar y ButtonIngresar"
-                      //Boton de "Ingresar"
+                      const SizedBox(height: 40),
                       Container(
                         height: 50,
                         width: 250,
@@ -147,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               backgroundColor: const Color(0xff08A5C0)),
                           onPressed: () {},
                           child: const Text(
-                            'Ingresar',
+                            'Enviar',
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
@@ -158,12 +103,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('¿No tienes cuenta?'),
+                          const Text('¿Ya tienes cuenta?'),
                           TextButton(
                             onPressed: () {},
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
-                                'Registrate'),
+                                'Inicia sesión'),
                           ),
                         ],
                       ),

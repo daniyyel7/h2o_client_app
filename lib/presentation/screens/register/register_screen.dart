@@ -8,14 +8,14 @@ import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_fiel
 
 // convertir tu StatelessWidget en un StatefulWidget
 //(No acepta variables de estado)
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   bool _isChecked = false;
 
   @override
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     children: [
                       const SizedBox(height: 40),
-                      const Text('Iniciar sesión',
+                      const Text('Registrate',
                           style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
@@ -88,6 +88,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const TextFormFieldCustom(
                         labelText: 'Contraseña',
+                        icon: Icons.remove_red_eye,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const TextFormFieldCustom(
+                        labelText: 'Repetir contraseña',
                         icon: Icons.remove_red_eye,
                       ),
                       const SizedBox(height: 5),
@@ -122,19 +129,21 @@ class _LoginScreenState extends State<LoginScreen> {
                           )
                         ],
                       ),
-                      Container(
-                          padding: const EdgeInsets.only(right: 25),
-                          alignment: Alignment.centerRight,
-                          child: TextButton(
-                            style: const ButtonStyle(),
-                            onPressed: () {},
-                            child: const Text(
-                              '¿Has olvidado tu contraseña?',
-                              style: TextStyle(
-                                color: Color(0xff08A5C0),
-                              ),
-                            ),
-                          )),
+                      // Row(
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     TextButton(
+                      //       style: const ButtonStyle(),
+                      //       onPressed: () {},
+                      //       child: const Text(
+                      //         'Al registrarte aceptas nuestros Términos y Condiciones',
+                      //         style: TextStyle(
+                      //             color: Color.fromARGB(255, 0, 0, 0),
+                      //             fontWeight: FontWeight.w200),
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
                       const SizedBox(
                           height:
                               18), //Espacio entre "Recordar y ButtonIngresar"
@@ -158,12 +167,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('¿No tienes cuenta?'),
+                          const Text('¿Ya tienes cuenta?'),
                           TextButton(
                             onPressed: () {},
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
-                                'Registrate'),
+                                'Inicia sesión'),
                           ),
                         ],
                       ),
