@@ -53,7 +53,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                             ],
                           ),
                           const SizedBox(
-                            width: 230,
+                            width: 220,
                           ),
                           const Badge(
                             label: Text('4'),

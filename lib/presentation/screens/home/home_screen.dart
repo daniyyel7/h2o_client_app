@@ -79,6 +79,7 @@ class HomeScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 0.0),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   CardsProductCustom(
                     titleCard: 'Garrafón Lleno',
