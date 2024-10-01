@@ -5,7 +5,9 @@ import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.d
 import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class CategoriesScreenBotellas extends StatelessWidget {
+  static const String name = 'categories_screen_botellas';
   const CategoriesScreenBotellas({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
@@ -49,18 +51,20 @@ class CategoriesScreenBotellas extends StatelessWidget {
 
             // Cards productos
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
               child: SizedBox(
                   height: 600.0,
                   child: ListView(
                     children: const [
                       CardsProductCustom(
                         titleCard: 'Garrafón Lleno',
-                        height: 200,
+                        description: 'descripcion de garrafon lleno',
+                        price: '53',
                       ),
                       CardsProductCustom(
                           titleCard: 'Garrafón vacío', 
-                          height: 200
+                        description: 'descripcion de garrafon vacio',
+                        price: '23',
                       ),
                     ],
                   )),
