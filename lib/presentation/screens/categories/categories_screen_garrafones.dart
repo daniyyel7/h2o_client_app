@@ -46,7 +46,7 @@ class CategoriesScreenGarrafones extends StatelessWidget {
                     child: Divider(
                         thickness: 2,
                         color: Color(0xFF08A5C0)
-                        ),
+                            ),
                   ),
                 ],
               ),
