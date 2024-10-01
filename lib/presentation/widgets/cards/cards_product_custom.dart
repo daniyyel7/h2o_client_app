@@ -9,7 +9,7 @@ class CardsProductCustom extends StatelessWidget {
   const CardsProductCustom({
     super.key,
     required this.titleCard,
-    required this.description, 
+    required this.description,
     required this.price,
   });
 

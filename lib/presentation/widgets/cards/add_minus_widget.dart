@@ -8,8 +8,7 @@ class AddMinusCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(
-          maxHeight: 30, maxWidth: 200),
+      constraints: const BoxConstraints(maxHeight: 30, maxWidth: 200),
       decoration: BoxDecoration(
           border: Border.all(
             color: Colors.grey,
@@ -27,14 +26,14 @@ class AddMinusCustom extends StatelessWidget {
 }
 
 class _IconButtonCustom extends StatelessWidget {
-    final IconData icon;
-    final VoidCallback? onPressed;
+  final IconData icon;
+  final VoidCallback? onPressed;
 
   const _IconButtonCustom({
     required this.icon,
     this.onPressed,
   });
- 
+
   @override
   Widget build(BuildContext context) {
     return IconButton(
@@ -43,13 +42,10 @@ class _IconButtonCustom extends StatelessWidget {
       color: Colors.lightGreen,
       style: const ButtonStyle(
           foregroundColor: WidgetStatePropertyAll(Colors.white),
-          backgroundColor: WidgetStatePropertyAll(Color(0xFF08A5C0))
-          ),
+          backgroundColor: WidgetStatePropertyAll(Color(0xFF08A5C0))),
       onPressed: () {},
       iconSize: 15,
-      constraints: const BoxConstraints(
-          maxHeight: 35, maxWidth: 35),
+      constraints: const BoxConstraints(maxHeight: 35, maxWidth: 35),
     );
   }
 }
-

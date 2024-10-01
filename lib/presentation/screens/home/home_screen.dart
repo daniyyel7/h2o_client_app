@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.dart';
-import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String name = 'home_screen';
