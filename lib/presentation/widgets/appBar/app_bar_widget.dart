@@ -43,13 +43,17 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                                 height: 5,
                               ),
                               Text('LINDA VISTA',
-                                  style: TextStyle(fontSize: 10, color: Colors.white)),
+                                  style: TextStyle(
+                                      fontSize: 10, color: Colors.white)),
                               SizedBox(
                                 width: 5,
                               ),
                               Text('',
-                                  style: TextStyle(fontSize: 7, color: Colors.white)),
-                              SizedBox(height: 5,)
+                                  style: TextStyle(
+                                      fontSize: 7, color: Colors.white)),
+                              SizedBox(
+                                height: 5,
+                              )
                             ],
                           ),
                           const SizedBox(
@@ -57,7 +61,10 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                           ),
                           const Badge(
                             label: Text('4'),
-                            child: Icon(Icons.shopping_cart_outlined, color: Colors.white,),
+                            child: Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.white,
+                            ),
                           )
                         ],
                       ),
@@ -69,24 +76,19 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                 height: 37.2,
                 color: const Color(0xFFF0F5F5),
               )
-            
             ],
           ),
           const Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Center(
-                            child: SizedBox(
-                              height: 60,
-                              width: 300,
-                              child: SearchBarCustom()),
-                          ),
-                        ],
-                      )
-        
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Center(
+                child:
+                    SizedBox(height: 60, width: 300, child: SearchBarCustom()),
+              ),
+            ],
+          )
         ],
       ),
     );
-
   }
 }
