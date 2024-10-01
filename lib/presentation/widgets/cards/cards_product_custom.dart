@@ -3,128 +3,109 @@ import 'package:h2o_client_app/presentation/widgets/cards/add_minus_widget.dart'
 
 class CardsProductCustom extends StatelessWidget {
   final String titleCard;
-  final double height;
-
-  const CardsProductCustom(
-      {super.key, required this.titleCard, required this.height});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-      child: Center(
-          child: Card(
-        color: Colors.white,
-        child: SizedBox(
-            height: height,
-            width: 350,
-            child: Row(
-              children: [
-                const _ImageProdcutCard(
-                  urlImage: 'assets/img/logo.png',
-                ),
-                Column(
-                  children: [
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 10),
-                        _TitleProduct(
-                          title: 'Garrafón',
-                        ),
-                        SizedBox(
-                            height: 80,
-                            width: 220,
-                            child: _DescriptionProduct(
-                              description:
-                                  'Descripcion del producto asdasdasdasda sadas das dasdasdasdasd asdasdasdeffwefwef',
-                            )),
-                      ],
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Precio',
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w600)),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const AddMinusCustom(),
-                            _ButtonAdd(),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            )),
-      )),
-    );
-  }
-}
-
-class _ButtonAdd extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      width: 100,
-      child: TextButton(
-        style: const ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(Colors.amber),
-        ),
-        child: const Text(
-          'Agregar',
-          style: TextStyle(color: Colors.black),
-        ),
-        onPressed: () {},
-      ),
-    );
-  }
-}
-
-class _DescriptionProduct extends StatelessWidget {
   final String description;
-  const _DescriptionProduct({
+  final String price;
+
+  const CardsProductCustom({
+    super.key,
+    required this.titleCard,
     required this.description,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(description, style: const TextStyle(fontSize: 12));
-  }
-}
-
-class _TitleProduct extends StatelessWidget {
-  final String title;
-  const _TitleProduct({
-    required this.title,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(title,
-        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600));
-  }
-}
-
-class _ImageProdcutCard extends StatelessWidget {
-  final String urlImage;
-
-  const _ImageProdcutCard({
-    required this.urlImage,
+    required this.price,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: SizedBox(
-        height: 180,
-        width: 99,
-        child: Image(image: AssetImage(urlImage)),
+      padding: const EdgeInsets.all(20),
+      child: Card(
+        color: Colors.white,
+        elevation: 4,
+        child: Expanded(
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SizedBox(
+                  width: 95,
+                  child: Image.asset('assets/img/garrafon.png'),
+                  //child: Image.network('http://picsum.photos/id/${1}/95/140'),
+                ),
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  SizedBox(
+                      width: 220,
+                      child: Text(
+                        titleCard,
+                        style: const TextStyle(
+                            fontSize: 17, fontWeight: FontWeight.w600),
+                      )),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  SizedBox(
+                      width: 160,
+                      child: Text(
+                        maxLines: 3,
+                        description,
+                        style: const TextStyle(
+                            fontSize: 10,
+                            leadingDistribution:
+                                TextLeadingDistribution.proportional),
+                      )),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  SizedBox(
+                    width: 210,
+                    child: Text(
+                      price,
+                      textAlign: TextAlign.end,
+                      style: const TextStyle(
+                          fontSize: 13, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(width: 105, child: AddMinusCustom()),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      SizedBox(
+                        width: 105,
+                        height: 30,
+                        child: FilledButton(
+                          onPressed: () {},
+                          style: const ButtonStyle(
+                              backgroundColor:
+                                  WidgetStatePropertyAll(Color(0xFFFFC40F))),
+                          child: const Text('Agregar',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w100)),
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

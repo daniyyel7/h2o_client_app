@@ -8,36 +8,28 @@ class AddMinusCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(
-          minHeight: 35, maxHeight: 37, minWidth: 110, maxWidth: 115),
+      constraints: const BoxConstraints(maxHeight: 30, maxWidth: 200),
       decoration: BoxDecoration(
           border: Border.all(
             color: Colors.grey,
           ),
-          borderRadius: BorderRadius.circular(45)),
+          borderRadius: BorderRadius.circular(90)),
       child: const Row(
         children: [
-          IconButtonCustom(icon: Icons.remove_outlined),
-          SizedBox(
-            width: 5,
-          ),
+          _IconButtonCustom(icon: Icons.remove_outlined),
           Text('1'),
-          SizedBox(
-            width: 5,
-          ),
-          IconButtonCustom(icon: Icons.add_outlined),
+          _IconButtonCustom(icon: Icons.add_outlined),
         ],
       ),
     );
   }
 }
 
-class IconButtonCustom extends StatelessWidget {
+class _IconButtonCustom extends StatelessWidget {
   final IconData icon;
   final VoidCallback? onPressed;
 
-  const IconButtonCustom({
-    super.key,
+  const _IconButtonCustom({
     required this.icon,
     this.onPressed,
   });
@@ -45,16 +37,15 @@ class IconButtonCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      padding: const EdgeInsets.all(7),
+      padding: const EdgeInsets.all(2),
       icon: Icon(icon),
       color: Colors.lightGreen,
       style: const ButtonStyle(
           foregroundColor: WidgetStatePropertyAll(Colors.white),
           backgroundColor: WidgetStatePropertyAll(Color(0xFF08A5C0))),
       onPressed: () {},
-      iconSize: 9,
-      constraints: const BoxConstraints(
-          minHeight: 20, minWidth: 20, maxHeight: 40, maxWidth: 40),
+      iconSize: 15,
+      constraints: const BoxConstraints(maxHeight: 35, maxWidth: 35),
     );
   }
 }
