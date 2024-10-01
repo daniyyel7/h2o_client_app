@@ -16,7 +16,7 @@ class CardsProductCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(10),
       child: Card(
         color: Colors.white,
         elevation: 4,
