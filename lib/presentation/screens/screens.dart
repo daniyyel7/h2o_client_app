@@ -7,3 +7,7 @@ export 'package:h2o_client_app/presentation/screens/register/register_screen.dar
 export 'package:h2o_client_app/presentation/screens/resetpassword/resetpassword_screen.dart';
 export 'package:h2o_client_app/presentation/screens/order/review_order_screen.dart';
 export 'package:h2o_client_app/presentation/screens/order/confirm_order_screen.dart';
+export 'package:h2o_client_app/presentation/screens/resetpassword/confirmationemail_screen.dart';
+export 'package:h2o_client_app/presentation/screens/orders/myorders_screen.dart';
+export 'package:h2o_client_app/presentation/screens/orders/detailorder_screen.dart';
+export 'package:h2o_client_app/presentation/screens/orders/ticketorder_screen.dart';

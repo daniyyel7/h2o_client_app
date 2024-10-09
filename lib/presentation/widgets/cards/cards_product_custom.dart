@@ -43,10 +43,8 @@ class CardsProductCustom extends StatelessWidget {
                     child: Text(
                       titleCard,
                       style: const TextStyle(
-                          fontSize: 17, 
-                          fontWeight: FontWeight.w600),
-                      )
-                    ),
+                          fontSize: 17, fontWeight: FontWeight.w600),
+                    )),
                 const SizedBox(
                   height: 5,
                 ),
@@ -56,11 +54,10 @@ class CardsProductCustom extends StatelessWidget {
                       maxLines: 3,
                       description,
                       style: const TextStyle(
-                        fontSize: 10,
-                        leadingDistribution: TextLeadingDistribution.proportional 
-                        ),
-                      )
-                    ),
+                          fontSize: 10,
+                          leadingDistribution:
+                              TextLeadingDistribution.proportional),
+                    )),
                 const SizedBox(
                   height: 10,
                 ),
@@ -70,9 +67,7 @@ class CardsProductCustom extends StatelessWidget {
                     price,
                     textAlign: TextAlign.end,
                     style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w500
-                      ),
+                        fontSize: 13, fontWeight: FontWeight.w500),
                   ),
                 ),
                 const SizedBox(
@@ -82,9 +77,7 @@ class CardsProductCustom extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(
-                      width: 105, 
-                      child: AddMinusCustom()),
+                    const SizedBox(width: 105, child: AddMinusCustom()),
                     const SizedBox(
                       width: 10,
                     ),
@@ -92,12 +85,15 @@ class CardsProductCustom extends StatelessWidget {
                       width: 105,
                       height: 30,
                       child: FilledButton(
-                          onPressed: () {},
-                          style: const ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(Color(0xFFFFC40F))
-                          ), 
-                          child:  const Text('Agregar',style: TextStyle( color: Colors.black, fontWeight: FontWeight.w100)),
-                          ),
+                        onPressed: () {},
+                        style: const ButtonStyle(
+                            backgroundColor:
+                                WidgetStatePropertyAll(Color(0xFFFFC40F))),
+                        child: const Text('Agregar',
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w100)),
+                      ),
                     )
                   ],
                 ),

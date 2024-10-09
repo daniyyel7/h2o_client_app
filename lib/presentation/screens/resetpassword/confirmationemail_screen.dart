@@ -5,17 +5,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_field_custom.dart';
+import 'package:pin_input_text_field/pin_input_text_field.dart';
 
 // convertir tu StatelessWidget en un StatefulWidget
 //(No acepta variables de estado)
-class ResetPasswordScreen extends StatefulWidget {
-  const ResetPasswordScreen({super.key});
+class ConfirmationEmailPassword extends StatefulWidget {
+  const ConfirmationEmailPassword({super.key});
 
   @override
-  State<ResetPasswordScreen> createState() => _ResetPasswordScreenState();
+  State<ConfirmationEmailPassword> createState() =>
+      _ConfirmationEmailPasswordState();
 }
 
-class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
+class _ConfirmationEmailPasswordState extends State<ConfirmationEmailPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +33,8 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ]),
         ),
         child: Stack(
-          //alignment: Alignment.center,
           children: [
+            //logo
             Column(
               children: [
                 const SizedBox(height: 100, width: 1000),
@@ -81,17 +83,17 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         children: [
                           SizedBox(width: 25),
                           Text(
-                            'Se enviara un código de verificación al correo',
+                            'Ingresa el código enviado al correo porporcionado',
                             textAlign: TextAlign.left,
                           ),
                         ],
                       ),
                       const SizedBox(height: 10),
                       const TextFormFieldCustom(
-                        labelText: 'Correo',
-                        icon: Icons.email,
+                        labelText: 'Código ',
+                        icon: Icons.password,
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 50),
                       Container(
                         height: 50,
                         width: 250,
@@ -100,7 +102,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                               backgroundColor: const Color(0xff08A5C0)),
                           onPressed: () {},
                           child: const Text(
-                            'Enviar',
+                            'Verificar',
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
