@@ -40,15 +40,5 @@ final appRouter = GoRouter(
       name: 'resetpassword_screen',
       builder: (context, state) => const ResetPasswordScreen(),
     ),
-    GoRoute(
-      path: '/order',
-      name: 'order_confirm_screen',
-      builder: (context, state) => const OrderConfirmScreen(),
-    ),
-    GoRoute(
-      path: '/order',
-      name: 'review_order_screen',
-      builder: (context, state) => const ReviewOrderScreen(),
-    ),
   ],
 );
