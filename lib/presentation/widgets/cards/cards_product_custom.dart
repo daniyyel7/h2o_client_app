@@ -9,14 +9,14 @@ class CardsProductCustom extends StatelessWidget {
   const CardsProductCustom({
     super.key,
     required this.titleCard,
-    required this.description, 
+    required this.description,
     required this.price,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(10),
       child: Card(
         color: Colors.white,
         elevation: 4,
