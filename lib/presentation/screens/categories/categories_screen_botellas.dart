@@ -19,11 +19,6 @@ class CategoriesScreenBotellas extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.all(12.0),
-              child: SearchBarCustom(),
-              ),
-
             // Separación entre el buscador y las cards
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),

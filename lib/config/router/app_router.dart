@@ -3,7 +3,7 @@ import 'package:h2o_client_app/presentation/screens/screens.dart';
 
 // GoRouter configuration
 final appRouter = GoRouter(
-  initialLocation: "/",
+  initialLocation: "/ticketorder",
   routes: [
     GoRoute(
       path: '/',
@@ -39,6 +39,26 @@ final appRouter = GoRouter(
       path: '/resetpassword',
       name: 'resetpassword_screen',
       builder: (context, state) => const ResetPasswordScreen(),
+    ),
+    GoRoute(
+      path: '/confirmationemail',
+      name: 'confirmationemail_screen',
+      builder: (context, state) => const ConfirmationEmailPassword(),
+    ),
+    GoRoute(
+      path: '/myorders',
+      name: 'myorders_screen',
+      builder: (context, state) => const MyOrdersScreen(),
+    ),
+    GoRoute(
+      path: '/detailorder',
+      name: 'detailorder_screen',
+      builder: (context, state) => const DetailOrderScreen(),
+    ),
+    GoRoute(
+      path: '/ticketorder',
+      name: 'ticketorder_screen',
+      builder: (context, state) => const TicketOrderScreen(),
     ),
   ],
 );
