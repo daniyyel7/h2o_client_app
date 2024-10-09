@@ -45,7 +45,6 @@ class _BottomNavigatorBarCustomState extends State<BottomNavigatorBarCustom> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       elevation: 0,
-      
       currentIndex: getCurrentIndex(context),
       onTap: (value) => onItemTapped(context, value),
       items: const <BottomNavigationBarItem>[

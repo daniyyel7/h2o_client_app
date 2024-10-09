@@ -61,13 +61,14 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Container(
                   constraints: const BoxConstraints.tightFor(
-                      height: 600, width: double.infinity),
+                      height: 540, width: double.infinity),
                   decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50))),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const SizedBox(height: 40),
                       const Text('Iniciar sesión',
@@ -167,6 +168,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ],
                       ),
+                      SizedBox(
+                        height: 60,
+                      )
                     ],
                   ),
                 ),

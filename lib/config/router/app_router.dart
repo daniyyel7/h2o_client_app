@@ -40,5 +40,10 @@ final appRouter = GoRouter(
       name: 'resetpassword_screen',
       builder: (context, state) => const ResetPasswordScreen(),
     ),
+    GoRoute(
+      path: '/viewcar',
+      name: 'view_car_screen',
+      builder: (context, state) => const ViewCarScreen(),
+    ),
   ],
 );
