@@ -57,12 +57,12 @@ class CategoriesScreenGarrafones extends StatelessWidget {
                       CardsProductCustom(
                          titleCard: 'Garrafón Lleno',
                         description: 'descripcion de garrafon lleno',
-                        price: '53',
+                        price: '\$ 10.00',
                       ),
                       CardsProductCustom(
                            titleCard: 'Garrafón vacío', 
                         description: 'descripcion de garrafon vacio',
-                        price: '23',
+                        price: '\$ 10.00',
                       ),
                     ],
                   )),

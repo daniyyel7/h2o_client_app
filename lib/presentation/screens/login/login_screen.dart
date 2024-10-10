@@ -1,9 +1,5 @@
-import 'dart:ffi';
-import 'dart:io';
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_field_custom.dart';
 
 // convertir tu StatelessWidget en un StatefulWidget
@@ -61,13 +57,14 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Container(
                   constraints: const BoxConstraints.tightFor(
-                      height: 600, width: double.infinity),
+                      height: 540, width: double.infinity),
                   decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50))),
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const SizedBox(height: 40),
                       const Text('Iniciar sesión',
@@ -127,7 +124,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           alignment: Alignment.centerRight,
                           child: TextButton(
                             style: const ButtonStyle(),
-                            onPressed: () {},
+                            onPressed: () {
+                              context.goNamed('resetpassword_screen');
+                            },
                             child: const Text(
                               '¿Has olvidado tu contraseña?',
                               style: TextStyle(
@@ -139,13 +138,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           height:
                               18), //Espacio entre "Recordar y ButtonIngresar"
                       //Boton de "Ingresar"
-                      Container(
+                      SizedBox(
                         height: 50,
                         width: 250,
                         child: FilledButton(
                           style: FilledButton.styleFrom(
                               backgroundColor: const Color(0xff08A5C0)),
-                          onPressed: () {},
+                          onPressed: () {
+                             context.goNamed('home_screen');
+                          },
                           child: const Text(
                             'Ingresar',
                             style: TextStyle(fontSize: 16),
@@ -160,13 +161,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           const Text('¿No tienes cuenta?'),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              context.goNamed('register_screen');
+                            },
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
                                 'Registrate'),
                           ),
                         ],
                       ),
+                      const SizedBox(
+                        height: 60,
+                      )
                     ],
                   ),
                 ),

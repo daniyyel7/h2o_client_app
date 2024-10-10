@@ -44,7 +44,7 @@ class TicketOrderScreen extends StatelessWidget {
 
             // Cards My orders
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: SizedBox(
                   height: 750.0,
                   child: ListView(
@@ -77,7 +77,8 @@ class TicketOrderScreen extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: 10,
                                       color: Colors.black,
-                                    )),
+                                    ),
+                                    maxLines: 2,),
                                 SizedBox(height: 40),
                                 const Row(
                                   mainAxisAlignment: MainAxisAlignment.center,

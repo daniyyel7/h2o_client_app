@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
-import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.dart';
-import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class MyOrdersScreen extends StatelessWidget {
-  //static const String name = 'categories_screen_garrafones';
+  static const String name = 'myorders_screen';
   const MyOrdersScreen({super.key});
 
   @override
@@ -44,7 +43,7 @@ class MyOrdersScreen extends StatelessWidget {
 
             // Cards My orders
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: SizedBox(
                   height: 750.0,
                   child: ListView(
@@ -86,7 +85,7 @@ class MyOrdersScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             const Padding(
                               padding: EdgeInsets.only(right: 100),
                               child: Column(
@@ -154,7 +153,9 @@ class MyOrdersScreen extends StatelessWidget {
                                         backgroundColor:
                                             const Color(0xff08A5C0),
                                         foregroundColor: Colors.white),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      context.goNamed('detailorder_screen');
+                                    },
                                     child: const Text(
                                       'Ver detalles',
                                       style: TextStyle(),
@@ -376,6 +377,9 @@ class MyOrdersScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+                      const SizedBox(
+                        height: 150,
+                      )
                     ],
                   )),
             ),

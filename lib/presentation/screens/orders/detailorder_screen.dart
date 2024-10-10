@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
-import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.dart';
-import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class DetailOrderScreen extends StatelessWidget {
   //static const String name = 'categories_screen_garrafones';
@@ -44,9 +43,9 @@ class DetailOrderScreen extends StatelessWidget {
 
             // Cards My orders
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: SizedBox(
-                  height: 750.0,
+                  height: 600.0,
                   child: ListView(
                     children: [
                       Card(
@@ -86,7 +85,7 @@ class DetailOrderScreen extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             const Padding(
                               padding: EdgeInsets.only(right: 100),
                               child: Column(
@@ -125,7 +124,7 @@ class DetailOrderScreen extends StatelessWidget {
                             const SizedBox(height: 30),
                             Column(
                               children: [
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsets.only(right: 180),
                                   child: Text(
                                     'Productos',
@@ -138,11 +137,16 @@ class DetailOrderScreen extends StatelessWidget {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Image.asset(
-                                        width: 70,
-                                        height: 70,
-                                        'assets/img/botellas_categorias.png'),
-                                    Column(
+                                    SizedBox(
+                                      child: Image.asset(
+                                          width: 70,
+                                          height: 70,
+                                          'assets/img/botellas_categorias.png'),
+                                    ),
+                                    const SizedBox(
+                                      width: 30,
+                                    ),
+                                    const Column(
                                       children: [
                                         Text(
                                           'Paquete de botellas',
@@ -175,7 +179,10 @@ class DetailOrderScreen extends StatelessWidget {
                                         width: 70,
                                         height: 70,
                                         'assets/img/garrafon_categoria.png'),
-                                    Column(
+                                        const SizedBox(
+                                      width: 30,
+                                    ),
+                                    const Column(
                                       children: [
                                         Text(
                                           'Garrafón',
@@ -231,7 +238,7 @@ class DetailOrderScreen extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Container(
+                                SizedBox(
                                   height: 40,
                                   width: 140,
                                   child: TextButton(
@@ -239,7 +246,9 @@ class DetailOrderScreen extends StatelessWidget {
                                         backgroundColor:
                                             const Color(0xff08A5C0),
                                         foregroundColor: Colors.white),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      context.goNamed('ticketorder_screen');
+                                    },
                                     child: const Text(
                                       'Ver recibo',
                                       style: TextStyle(),
@@ -248,13 +257,15 @@ class DetailOrderScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 15),
+                            const SizedBox(height: 15),
                           ],
                         ),
                       ),
                     ],
                   )),
             ),
+          
+            const SizedBox(height: 150,)
           ],
         ),
       ),

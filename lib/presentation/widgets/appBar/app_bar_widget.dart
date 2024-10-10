@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
@@ -28,9 +29,17 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                           const SizedBox(
                             width: 15,
                           ),
-                          Image.asset(
-                            'assets/img/logo.png',
-                            scale: 2.5,
+                          Expanded(
+                            child: SizedBox(
+                              height: 38.8,
+                              width: 35,
+                              child: Padding(
+                                padding: const EdgeInsets.all(1.0),
+                                child: Image.asset(
+                                  'assets/img/logo.png',
+                                ),
+                              ),
+                            ),
                           ),
                           const SizedBox(
                             width: 15,
@@ -59,11 +68,20 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
                           const SizedBox(
                             width: 220,
                           ),
-                          const Badge(
-                            label: Text('4'),
-                            child: Icon(
-                              Icons.shopping_cart_outlined,
-                              color: Colors.white,
+                          SizedBox(
+                            height: 30,
+                            child: IconButton(
+                              onPressed: () {
+                                 context.goNamed('view_car_screen');
+                              }, 
+                              icon: const Badge(
+                                 label: Text('4'),
+                                 child:  Icon(
+                                    Icons.shopping_cart_outlined,
+                                    color: Colors.white,
+                            
+                              ))
+                            
                             ),
                           )
                         ],

@@ -10,16 +10,56 @@ class ViewProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  const Scaffold(
       appBar: AppBarCustom(),
-      body: Column(
-          children: [
-            CardsProductCustom(
-              titleCard: 'Garrafón', 
-              description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
-              price: 'Precio \$ 50.00',
-              ),
-          ],
-        ),
       bottomNavigationBar: BottomNavigatorBarCustom(),
+      backgroundColor: Color(0xFFF0F5F5),
+      body: SingleChildScrollView(
+        
+        child: Column(
+            children: [
+              CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+        
+                CardsProductCustom(
+                titleCard: 'Garrafón', 
+                description:  'El garrafon es de \n20 litros de agua pruficada totalmente',
+                price: 'Precio \$ 50.00',
+                ),
+            ],
+          ),
+      ),
 
     );
   }

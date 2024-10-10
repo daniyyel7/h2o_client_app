@@ -83,7 +83,7 @@ class HomeScreen extends StatelessWidget {
                   CardsProductCustom(
                     titleCard: 'Garrafón Lleno',
                     description: 'descripcion de garrafon lleno',
-                    price: '53',
+                    price: '\$ 10.00',
                   ),
                 ],
               ),

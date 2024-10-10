@@ -77,6 +77,7 @@ flutter:
 
   assets:
     - assets/img/logo.png
+    - assets/img/logoh2o.png
     - assets/img/garrafon.png
     - assets/img/garrafon_categoria.png
     - assets/img/botellas_categorias.png

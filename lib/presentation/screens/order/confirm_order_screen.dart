@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
 
@@ -40,7 +41,8 @@ class OrderConfirmScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -48,7 +50,8 @@ class OrderConfirmScreen extends StatelessWidget {
                     width: 150.0,
                     height: 150.0,
                     child: Image(
-                      image: AssetImage('assets/img/order_confirmation_image.png'),
+                      image:
+                          AssetImage('assets/img/order_confirmation_image.png'),
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -70,17 +73,19 @@ class OrderConfirmScreen extends StatelessWidget {
                     height: 35,
                     child: ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all( const Color(0xff08A5C0)),
+                        backgroundColor:
+                            WidgetStateProperty.all(const Color(0xff08A5C0)),
                       ),
                       onPressed: () {
                         // Regresa al home
+                        context.goNamed('home_screen');
                       },
                       child: const Text(
                         "Ver más productos",
                         style: TextStyle(
                           color: Colors.white,
                         ),
-                        ),
+                      ),
                     ),
                   ),
                 ],
