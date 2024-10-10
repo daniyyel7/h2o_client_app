@@ -16,12 +16,12 @@ class _BottomNavigatorBarCustomState extends State<BottomNavigatorBarCustom> {
     final String location = GoRouterState.of(context).uri.toString();
 
     switch (location) {
-      case '/viewproducts':
+      case '/myorders':
         return 0;
       case '/':
         return 1;
-      case '/s':
-        return 3;
+      case '/login':
+        return 2;
       default:
         return 1;
     }
@@ -30,13 +30,13 @@ class _BottomNavigatorBarCustomState extends State<BottomNavigatorBarCustom> {
   void onItemTapped(BuildContext context, int index) {
     switch (index) {
       case 0:
-        context.goNamed('view_products_screen');
+        context.goNamed('myorders_screen');
         break;
       case 1:
         context.goNamed('home_screen');
         break;
       case 2:
-        context.go('/s');
+        context.goNamed('login_screen');
         break;
     }
   }

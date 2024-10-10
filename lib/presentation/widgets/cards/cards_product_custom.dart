@@ -59,6 +59,7 @@ class CardsProductCustom extends StatelessWidget {
                           leadingDistribution:
                               TextLeadingDistribution.proportional),
                     )),
+                          
                 const SizedBox(
                   height: 10,
                 ),
@@ -328,8 +329,7 @@ class CardsProductCustom extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 )
-              ],
-            )
+          ])
           ],
         ),
       ),

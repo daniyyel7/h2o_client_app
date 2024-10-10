@@ -1,9 +1,5 @@
-import 'dart:ffi';
-import 'dart:io';
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_field_custom.dart';
 
 // convertir tu StatelessWidget en un StatefulWidget
@@ -16,8 +12,6 @@ class ResetPasswordScreen extends StatefulWidget {
 }
 
 class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
-  bool _isChecked = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,7 +64,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                   child: Column(
                     children: [
                       const SizedBox(height: 40),
-                      const Text('Resetear contraseña',
+                      const Text('Cambio de contraseña',
                           style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
@@ -79,6 +73,16 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         // Dar el espacio
                         height: 40,
                       ),
+                      const Row(
+                        children: [
+                          SizedBox(width: 25),
+                          Text(
+                            'Se enviara un código de verificación al correo',
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
                       const TextFormFieldCustom(
                         labelText: 'Correo',
                         icon: Icons.email,
@@ -90,7 +94,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         child: FilledButton(
                           style: FilledButton.styleFrom(
                               backgroundColor: const Color(0xff08A5C0)),
-                          onPressed: () {},
+                          onPressed: () {
+                            context.goNamed('confirmationemail_screen');
+                          },
                           child: const Text(
                             'Enviar',
                             style: TextStyle(fontSize: 16),
@@ -105,7 +111,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         children: [
                           const Text('¿Ya tienes cuenta?'),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               context.goNamed('login_screen');
+                            },
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
                                 'Inicia sesión'),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:h2o_client_app/presentation/widgets/appBar/app_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/bottomNavigatorBar/bottom_navigator_bar_widget.dart';
 import 'package:h2o_client_app/presentation/widgets/cards/cards_product_custom.dart';
-import 'package:h2o_client_app/presentation/widgets/searachBar/serach_bar_custom.dart';
 
 class CategoriesScreenGarrafones extends StatelessWidget {
   static const String name = 'categories_screen_garrafones';
@@ -58,12 +57,12 @@ class CategoriesScreenGarrafones extends StatelessWidget {
                       CardsProductCustom(
                          titleCard: 'Garrafón Lleno',
                         description: 'descripcion de garrafon lleno',
-                        price: '53',
+                        price: '\$ 10.00',
                       ),
                       CardsProductCustom(
                            titleCard: 'Garrafón vacío', 
                         description: 'descripcion de garrafon vacio',
-                        price: '23',
+                        price: '\$ 10.00',
                       ),
                     ],
                   )),

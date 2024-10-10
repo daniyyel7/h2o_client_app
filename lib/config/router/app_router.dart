@@ -41,9 +41,39 @@ final appRouter = GoRouter(
       builder: (context, state) => const ResetPasswordScreen(),
     ),
     GoRoute(
+      path: '/confirmationemail',
+      name: 'confirmationemail_screen',
+      builder: (context, state) => const ConfirmationEmailPassword(),
+    ),
+    GoRoute(
+      path: '/myorders',
+      name: 'myorders_screen',
+      builder: (context, state) => const MyOrdersScreen(),
+    ),
+    GoRoute(
+      path: '/detailorder',
+      name: 'detailorder_screen',
+      builder: (context, state) => const DetailOrderScreen(),
+    ),
+    GoRoute(
+      path: '/ticketorder',
+      name: 'ticketorder_screen',
+      builder: (context, state) => const TicketOrderScreen(),
+    ),
+    GoRoute(
       path: '/viewcar',
       name: 'view_car_screen',
       builder: (context, state) => const ViewCarScreen(),
+    ),
+     GoRoute(
+      path: '/confirmOrder',
+      name: 'order_confirm_screen',
+      builder: (context, state) => const OrderConfirmScreen(),
+    ),
+      GoRoute(
+      path: '/rewiewOrder',
+      name: 'review_order_screen',
+      builder: (context, state) => const ReviewOrderScreen(),
     ),
   ],
 );

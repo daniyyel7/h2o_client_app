@@ -4,16 +4,15 @@ import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_fiel
 
 // convertir tu StatelessWidget en un StatefulWidget
 //(No acepta variables de estado)
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class ConfirmationEmailPassword extends StatefulWidget {
+  const ConfirmationEmailPassword({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<ConfirmationEmailPassword> createState() =>
+      _ConfirmationEmailPasswordState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  bool _isChecked = false;
-
+class _ConfirmationEmailPasswordState extends State<ConfirmationEmailPassword> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,8 +28,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ]),
         ),
         child: Stack(
-          //alignment: Alignment.center,
           children: [
+            //logo
             Column(
               children: [
                 const SizedBox(height: 100, width: 1000),
@@ -57,17 +56,16 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Container(
                   constraints: const BoxConstraints.tightFor(
-                      height: 540, width: double.infinity),
+                      height: 600, width: double.infinity),
                   decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50))),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       const SizedBox(height: 40),
-                      const Text('Iniciar sesión',
+                      const Text('Cambio de contraseña',
                           style: TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.w600,
@@ -76,69 +74,22 @@ class _LoginScreenState extends State<LoginScreen> {
                         // Dar el espacio
                         height: 40,
                       ),
-                      const TextFormFieldCustom(
-                        labelText: 'Usuario',
-                        icon: Icons.person,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const TextFormFieldCustom(
-                        labelText: 'Contraseña',
-                        icon: Icons.remove_red_eye,
-                      ),
-                      const SizedBox(height: 5),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                      const Row(
                         children: [
-                          const SizedBox(width: 7),
-                          Checkbox(
-                            value: _isChecked,
-                            onChanged: (value) {
-                              setState(() {
-                                _isChecked = value ?? false;
-                              });
-                            },
-                            visualDensity: VisualDensity.standard,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4),
-                              side: BorderSide(
-                                color: _isChecked
-                                    ? const Color(0xff08A5C0)
-                                    : Colors.grey,
-                                width: 2,
-                              ),
-                            ),
-                            fillColor: WidgetStateProperty.all(_isChecked
-                                ? const Color(0xff08A5C0)
-                                : Colors.transparent),
+                          SizedBox(width: 25),
+                          Text(
+                            'Ingresa el código enviado al correo porporcionado',
+                            textAlign: TextAlign.left,
                           ),
-                          Container(
-                            padding: const EdgeInsets.only(left: 0.01),
-                            child: const Text('Recordar'),
-                          )
                         ],
                       ),
+                      const SizedBox(height: 10),
+                      const TextFormFieldCustom(
+                        labelText: 'Código ',
+                        icon: Icons.password,
+                      ),
+                      const SizedBox(height: 50),
                       Container(
-                          padding: const EdgeInsets.only(right: 25),
-                          alignment: Alignment.centerRight,
-                          child: TextButton(
-                            style: const ButtonStyle(),
-                            onPressed: () {
-                              context.goNamed('resetpassword_screen');
-                            },
-                            child: const Text(
-                              '¿Has olvidado tu contraseña?',
-                              style: TextStyle(
-                                color: Color(0xff08A5C0),
-                              ),
-                            ),
-                          )),
-                      const SizedBox(
-                          height:
-                              18), //Espacio entre "Recordar y ButtonIngresar"
-                      //Boton de "Ingresar"
-                      SizedBox(
                         height: 50,
                         width: 250,
                         child: FilledButton(
@@ -148,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                              context.goNamed('home_screen');
                           },
                           child: const Text(
-                            'Ingresar',
+                            'Verificar',
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
@@ -159,20 +110,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text('¿No tienes cuenta?'),
+                          const Text('¿Ya tienes cuenta?'),
                           TextButton(
                             onPressed: () {
-                              context.goNamed('register_screen');
+                               context.goNamed('login_screen');
                             },
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
-                                'Registrate'),
+                                'Inicia sesión'),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 60,
-                      )
                     ],
                   ),
                 ),

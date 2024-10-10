@@ -1,9 +1,5 @@
-import 'dart:ffi';
-import 'dart:io';
-
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:h2o_client_app/presentation/widgets/textFormField/text_form_field_custom.dart';
 
 // convertir tu StatelessWidget en un StatefulWidget
@@ -154,7 +150,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: FilledButton(
                           style: FilledButton.styleFrom(
                               backgroundColor: const Color(0xff08A5C0)),
-                          onPressed: () {},
+                          onPressed: () {
+                            context.goNamed('home_screen');
+                          },
                           child: const Text(
                             'Ingresar',
                             style: TextStyle(fontSize: 16),
@@ -169,7 +167,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         children: [
                           const Text('¿Ya tienes cuenta?'),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                               context.goNamed('login_screen');
+                            },
                             child: const Text(
                                 style: TextStyle(color: Color(0xff08A5C0)),
                                 'Inicia sesión'),

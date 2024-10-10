@@ -51,14 +51,14 @@ class CategoriesScreenBotellas extends StatelessWidget {
                   child: ListView(
                     children: const [
                       CardsProductCustom(
-                        titleCard: 'Garrafón Lleno',
-                        description: 'descripcion de garrafon lleno',
-                        price: '53',
+                        titleCard: 'Botellas',
+                        description: 'descripcion de botellas llenas',
+                        price: '\$ 5.00',
                       ),
                       CardsProductCustom(
-                          titleCard: 'Garrafón vacío', 
-                        description: 'descripcion de garrafon vacio',
-                        price: '23',
+                        titleCard: 'Paquete de botellas', 
+                        description: 'descripcion de botellas vacias',
+                        price: '\$ 30.00',
                       ),
                     ],
                   )),
